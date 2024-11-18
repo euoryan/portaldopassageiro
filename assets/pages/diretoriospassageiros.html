@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Diretório de Links</title>
+        <link rel="icon" type="image/svg+xml" href="assets\images\favicon\diretorios.svg"> <!-- Favicon SVG -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fafafa;
+        }
+        
+        .hero-section {
+            background: #0088cc;
+            height: auto;
+            padding: 2rem 0;
+        }
+
+        .telegram-logo {
+          width: 48px; /* Reduzido de 64px */
+          height: 48px; /* Reduzido de 64px */
+          padding: 0.75rem; /* Reduzido de 1rem */
+          background: white;
+          border-radius: 12px; /* Reduzido de 16px */
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          display: flex; /* Adicionado */
+          align-items: center; /* Adicionado */
+          justify-content: center; /* Adicionado */
+      }
+
+        .telegram-logo svg {
+          width: 24px; /* Adicionado */
+          height: 24px; /* Adicionado */
+          fill: #0088cc; /* Adicionado - cor do Telegram */
+        }
+
+        .btn-primary {
+            background: #0088cc;
+            color: white;
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            transition: background-color 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-primary:hover {
+            background: #0077b3;
+        }
+
+        .tips-toggle {
+            color: #0088cc;
+            padding: 0.5rem 0;
+            transition: all 0.2s ease;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+            border-bottom: 2px solid transparent;
+            cursor: pointer;
+            margin-top: 1rem; /* Aumentar o espaçamento para baixo */
+        }
+
+        .tips-toggle:hover {
+            border-bottom: 2px solid #0088cc;
+        }
+
+        .tips-content {
+            display: none;
+            margin-top: 1rem;
+            width: 100%;
+        }
+
+        .tip-item {
+            background: white;
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .tip-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .tip-title {
+            color: #0088cc;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .tip-content {
+            color: #4b5563;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        footer {
+            background: #f8f9fa;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        /* Estilo para o link com hover */
+        .social-link {
+            color: #4b5563; /* Cor padrão do texto */
+            transition: color 0.3s ease; /* Transição suave */
+        }
+
+        .social-link:hover {
+            color: #0077b3; /* Azul de hover */
+        }
+
+        @media (max-width: 640px) {
+            .btn-container {
+                display: flex;
+                flex-direction: column;
+                gap: 0.75rem;
+                width: 100%;
+            }
+
+            .btn-container > a {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <header class="hero-section relative">
+        <div style="position: absolute; top: 1rem; left: 1rem;">
+            <a href="https://euoryan.com/portaldomotorista/" style="
+                background-color: white; /* Fundo branco */
+                color: #216dde; /* Texto e ícone azul */
+                padding: 0.5rem 1.2rem;
+                border-radius: 0.5rem;
+                font-size: 0.875rem;
+                font-weight: 500;
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                border: 1px solid #216dde; /* Borda azul sutil */
+                transition: background-color 0.2s ease;
+                cursor: pointer;
+            " onmouseover="this.style.backgroundColor='#f2f4f6';" onmouseout="this.style.backgroundColor='white';">
+                <i class="fas fa-arrow-left" style="color: #216dde; font-size: 1.1rem;"></i> Portal
+            </a>
+        </div>
+        <div class="container mx-auto px-4 flex flex-col items-center">
+            <div class="telegram-logo mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Ícone Telegram --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm50.7-186.9L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/></svg>
+            </div>
+            <h1 class="text-2xl sm:text-3xl font-bold text-white text-center mb-2">Diretório de Links</h1>
+            <p class="text-lg text-white text-center opacity-90 max-w-xl">Encontre rapidamente recursos e ferramentas essenciais em um só lugar.</p>
+        </div>
+    </header>
+    
+
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div id="directories-container" class="max-w-2xl mx-auto space-y-6"></div>
+    </main>
+
+    <footer class="f">
+      <div class="notification">Copiado!</div>
+      
+      <div class="w">
+        <p class="t">Desenvolvido por Ryan <i class="fa-solid fa-mug-hot"></i></p>
+        
+        <div class="c">
+          <button class="copy-btn" data-value="ryanzera.dev@gmail.com">
+            <i class="fas fa-envelope"></i>ryanzera.dev@gmail.com
+          </button>
+          <button class="copy-btn" data-value="+5548984613946">
+            <i class="fas fa-phone-alt"></i>+55 (48) 98461-3946
+          </button>
+        </div>
+        
+        <div class="s">
+          <a href="https://www.instagram.com/euoryan/" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://github.com/euoryan" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/euoryan/" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+     
+        <div class="l">
+          <a href="/politica-de-privacidade">Política de Privacidade</a>
+          <span>•</span>
+          <a href="/termos-de-uso">Termos de Uso</a>
+        </div>
+      </div>
+     
+      <hr>
+      
+      <div class="w">
+        <div class="cp">
+          <small>© 2024 Todos os direitos reservados.</small>
+        </div>
+      </div>
+    
+      <style>
+        .f {
+          background: #111827;
+          color: #9CA3AF;
+          font: 14px Inter, sans-serif;
+          padding: 16px;
+          position: relative;
+        }
+        .notification {
+          position: fixed;
+          bottom: 20px;
+          left: 50%;
+          transform: translateX(-50%) translateY(100px);
+          background: #2e9aff;
+          color: white;
+          padding: 8px 16px;
+          border-radius: 4px;
+          opacity: 0;
+          transition: 0.3s;
+        }
+        .notification.show {
+          transform: translateX(-50%) translateY(0);
+          opacity: 1;
+        }
+        .w {
+          max-width: 1200px;
+          margin: auto;
+          text-align: center;
+        }
+        .t {
+          font-size: 14px;
+          margin: 0 0 16px;
+        }
+        .c {
+          display: flex;
+          gap: 24px;
+          justify-content: center;
+          margin-bottom: 12px;
+        }
+        .s {
+          display: flex;
+          gap: 20px;
+          justify-content: center;
+          font-size: 18px;
+          margin-bottom: 12px;
+        }
+        .l {
+          font-size: 13px;
+          display: flex;
+          gap: 8px;
+          justify-content: center;
+          margin-bottom: 12px;
+        }
+        hr {
+          border: 0;
+          height: 1px;
+          background: rgba(156, 163, 175, 0.2);
+          margin: 12px 0;
+        }
+        .cp {
+          color: #6B7280;
+          font-size: 12px;
+        }
+        a, .copy-btn {
+          color: inherit;
+          text-decoration: none;
+          display: inline-flex;
+          align-items: center;
+        }
+        .copy-btn {
+          background: none;
+          border: none;
+          cursor: pointer;
+          font: inherit;
+          padding: 0;
+        }
+        i {
+          margin-right: 8px;
+        }
+        .fa-mug-hot {
+          color: #4791ff;
+          animation: b 1s infinite;
+          margin-left: 4px;
+          margin-right: 0;
+        }
+        a:hover, .copy-btn:hover {
+          color: #fff;
+        }
+        @keyframes b {
+          50% {transform: scale(1.1)}
+        }
+        @media(max-width: 640px) {
+          .c {
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+          }
+        }
+      </style>
+    
+      <script>
+        const notification = document.querySelector('.notification');
+        let timeoutId;
+    
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+          btn.addEventListener('click', async () => {
+            const text = btn.getAttribute('data-value');
+            await navigator.clipboard.writeText(text);
+            
+            // Limpa o timeout anterior se existir
+            if (timeoutId) clearTimeout(timeoutId);
+            
+            // Mostra a notificação
+            notification.classList.add('show');
+            
+            // Remove a notificação após 2 segundos
+            timeoutId = setTimeout(() => {
+              notification.classList.remove('show');
+            }, 2000);
+          });
+        });
+      </script>
+    </footer> 
+    
+    <script>
+        // JavaScript para renderização dos diretórios
+        const directories = [
+            {
+                "title": "Ficha Mecânica",
+                "description": "Acesse rapidamente o formulário para as fichas mecânicas.",
+                "url": "https://bit.ly/fichamecanica",
+                "icon": "fas fa-file-alt",
+                "buttonText": "Abrir Formulário",
+                "tips": [
+                    { "title": "Preenchimento Obrigatório", "content": "As fichas mecânicas devem ser feitas em qualquer circunstância, mesmo que relatadas a um supervisor." },
+                    { "title": "Identificação", "content": "Registre os IDs das fichas para futura identificação." },
+                    { "title": "Detalhes Importantes", "content": "Inclua todos os detalhes e informações possíveis para melhor compreensão da manutenção." }
+                ]
+            },
+            {
+                "title": "Dúvidas sobre o Telegram?",
+                "description": "Clique no link abaixo para acessar o processo e entrar em contato conosco.",
+                "url": "https://euoryan.com.br/downloadtelegramsite/",
+                "icon": "fa-solid fa-bars-staggered",
+                "buttonText": "Ver Processos",
+                "tips": [
+                    { "title": "Informações Importantes", "content": "Consulte regularmente para estar sempre informado sobre os procedimentos." },
+                    { "title": "Dúvidas?", "content": "Entre em contato com o suporte se precisar de assistência." }
+                ]
+            },
+            {
+                "title": "Portal de Roteiro Intelbras",
+                "description": "Acesse o portal de roteiros, links e grupos da Intelbras.",
+                "url": "https://bit.ly/roteirointelbras",
+                "icon": "fa-solid fa-globe",
+                "buttonText": "Abrir Portal",
+                "tips": [
+                    { "title": "Estrutura por Turnos", "content": "O portal é separado por turnos, cada um com suas rotas específicas, links de roteiro, e convite para grupos." },
+                    { "title": "Atualizações Constantes", "content": "As rotas sofrem atualizações constantes; sempre consulte o portal antes de realizar suas rotas." },
+                    { "title": "Comunicado Obrigatório", "content": "É obrigatório avisar no grupo quando iniciar a rota." }
+                ]
+            },
+            {
+                "title": "Receber Rotas",
+                "description": "Acesse nosso bot no Telegram para receber suas rotas sempre que disponíveis.",
+                "url": "https://bit.ly/receberrotas",
+                "icon": "fas fa-robot",
+                "buttonText": "Ativar Bot",
+                "tips": [
+                    { "title": "ID de Usuário", "content": "Ao iniciar o bot, você receberá uma mensagem de boas-vindas com seu ID de usuário. Guarde esse ID para identificação." },
+                    { "title": "Segurança", "content": "Nosso bot é seguro e acessa apenas as informações pessoais que você compartilhar." },
+                    { "title": "Resolução de Problemas", "content": "Se tiver problemas ao iniciar o bot, tente fechar e reabrir o Telegram." },
+                    { "title": "Comunicação com o Bot", "content": "Evite enviar mensagens aleatórias para o bot, pois ele não interage diretamente com a equipe." },
+                    { "title": "Suporte", "content": "Todas as mensagens do bot têm um botão de suporte. Clique para ser direcionado ao suporte operacional." }
+                ]
+            },
+            {
+                "title": "Registro de Ausência",
+                "description": "Registre a ausência do crachá de um passageiro.",
+                "url": "https://bit.ly/registrocrachas",
+                "icon": "fas fa-id-card",
+                "buttonText": "Registrar Ausência",
+                "tips": [
+                    { "title": "Registro Necessário", "content": "Qualquer passageiro que ausentar seu crachá deve ser registrado pelo motorista com as informações devidas." },
+                    { "title": "Procedimentos Intelbras", "content": "Consulte os procedimentos da Intelbras para mais informações." }
+                ]
+            },
+            {
+                "title": "Procedimentos Intelbras",
+                "description": "Acesse todos os procedimentos importantes da Intelbras.",
+                "url": "http://bit.ly/intelbrasrecursos",
+                "icon": "fas fa-book",
+                "buttonText": "Ver Procedimentos",
+                "tips": [
+                    { "title": "Informações Importantes", "content": "Consulte regularmente para estar sempre informado sobre os procedimentos." },
+                    { "title": "Dúvidas?", "content": "Entre em contato com o suporte se precisar de assistência." }
+                ]
+            }
+        ];
+
+        function renderDirectories() {
+            const container = document.getElementById('directories-container');
+
+            directories.forEach((directory, index) => {
+                const directoryHTML = `
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-4 text-center">${directory.title}</h2>
+                        <p class="text-gray-600 mb-4 text-center">${directory.description}</p>
+                        <a href="${directory.url}" target="_blank" class="btn-primary">
+                            <i class="${directory.icon}"></i> ${directory.buttonText}
+                        </a>
+                        <div class="tips-toggle" onclick="toggleTips(${index})">
+                            Ver dicas úteis <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="tips-content" id="tips-${index}">
+                            ${directory.tips.map(tip => `
+                                <div class="tip-item">
+                                    <h3 class="tip-title">${tip.title}</h3>
+                                    <p class="tip-content">${tip.content}</p>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+                container.insertAdjacentHTML('beforeend', directoryHTML);
+            });
+        }
+
+        function toggleTips(index) {
+            const tipsContent = document.getElementById(`tips-${index}`);
+            tipsContent.style.display = tipsContent.style.display === 'block' ? 'none' : 'block';
+        }
+
+        renderDirectories();
+    </script>
+</body>
+</html>

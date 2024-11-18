@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#216dde">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Portal dos Passageiros Intelbras</title>
+    <meta name="description" content="Portal para passageiros Intelbras com acesso a informações, suporte e recursos. Comunicação fácil e atendimento personalizado.">
+    <meta name="keywords" content="passageiros, Intelbras, transporte, comunicação, suporte">
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="style.css">
+    <link rel="preload" as="script" href="script.js">
+    <link rel="icon" type="image/png" href="assets\images\favicon\portal.svg">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <style>
+        
+        footer {
+            margin: 0;
+            padding: 0;
+            height: auto;
+            overflow: hidden;
+        }
+
+        .nav-links a:hover {
+            color: #216dde;
+        }
+
+        .logo:hover {
+            color: #0b1729;
+        }
+
+        .logo span {
+            margin-left: 0px;
+            color: #0b1729;
+        }
+
+        .hero-title {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .btn {
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .btn:hover {
+            color: #5a5a5a;
+        }
+
+        .social-links a {
+            color: #333;
+            font-size: 24px;
+            margin: 0 0px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #3a6899;
+        }
+
+        .bus-icon {
+            font-size: 2.5rem;
+            color: #216dde;
+            transform-origin: center;
+            animation: driveBy 3s infinite;
+            position: relative;
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        @keyframes driveBy {
+            0% {
+                transform: translateX(-20px) scale(0.9);
+                opacity: 0;
+            }
+            20% {
+                transform: translateX(0) scale(1);
+                opacity: 1;
+            }
+            40% {
+                transform: translateX(0) scale(1);
+                opacity: 1;
+            }
+            60% {
+                transform: translateX(0) scale(1) rotateY(0deg);
+                opacity: 1;
+            }
+            80% {
+                transform: translateX(20px) scale(0.9) rotateY(180deg);
+                opacity: 0.7;
+            }
+            100% {
+                transform: translateX(-20px) scale(0.9) rotateY(0deg);
+                opacity: 0;
+            }
+        }
+
+        .road-reflection {
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, rgba(33, 109, 222, 0.3), transparent);
+            filter: blur(1px);
+            animation: reflection 3s infinite;
+        }
+
+        @keyframes reflection {
+            0% {
+                opacity: 0;
+                transform: translateX(-70%);
+            }
+            20% {
+                opacity: 0.5;
+                transform: translateX(-50%);
+            }
+            80% {
+                opacity: 0.5;
+                transform: translateX(-30%);
+            }
+            100% {
+                opacity: 0;
+                transform: translateX(-70%);
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <a href="#" class="logo">Passageiros<span></span></a>
+            <div class="nav-toggle">
+                <i class="fas fa-bars" style="font-size: 1.2rem;"></i>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="active">Início</a>
+                <a href="#projetos">Páginas</a>
+                <a href="#vantagens">Vantagens</a>
+                <a href="#contato">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Portal dos<br><span><span class="name">Passageiros
+                <i class="fa-solid fa-child-reaching bus-icon">
+                    <div class="road-reflection"></div>
+                </i>
+            </span></span></h1>
+            <p>Recursos, informações e suporte para passageiros da Intelbras. Acesse o conteúdo e facilite sua jornada.</p>
+            <a href="#projetos" class="btn">Explorar Páginas</a>
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos">
+        <div class="section-content">
+            <h2 class="section-title">Páginas</h2>
+            <div class="projects-grid">
+                <div class="project-card" onclick="window.location.href='assets/pages/guia.html';">
+                    <div class="project-image">
+                        <img src="assets\images\projetos\downtel.svg" alt="Guia Novos Passageiros">
+                        <a href="assets\pages\guia.html" class="btn">Visitar</a>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Guia Novos Passageiros</h3>
+                        <p class="project-description">Instruções para começar a sua jornada conosco, e nosso contato de suporte.</p>
+                        <div class="project-tags">
+                            <span class="tag">WhatsApp</span>
+                            <span class="tag">Comunicação</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="window.location.href='assets/pages/diretoriospassageiros.html';">
+                    <div class="project-image">
+                        <img src="assets\images\projetos\directmot.svg" alt="Diretórios Passageiros">
+                        <a href="assets/pages/downloadtelegram.html" class="btn">Visitar</a>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Diretório de Links</h3>
+                        <p class="project-description">Acesso fácil a diretórios úteis para passageiros.</p>
+                        <div class="project-tags">
+                            <span class="tag">Diretórios</span>
+                            <span class="tag">Passageiros</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="window.location.href='assets/pages/intelbras.html';">
+                  <div class="project-image">
+                      <img src="assets\images\projetos\intelbras.svg" alt="Guia Intelbras">
+                      <a href="assets/pages/intelbras.html" class="btn">Visitar</a>
+                  </div>
+                  <div class="project-content">
+                      <h3 class="project-title">Regras Intelbras</h3>
+                      <p class="project-description">Procedimentos essenciais para melhor atender os passageiros.</p>
+                      <div class="project-tags">
+                          <span class="tag">Guia</span>
+                          <span class="tag">Instruções</span>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="project-card" onclick="window.location.href='assets/pages/dicastelegram.html';">
+                <div class="project-image">
+                    <img src="assets\images\projetos\dicastel.svg" alt="Dicas Telegram">
+                    <a href="assets/pages/dicastelegram.html" class="btn">Visitar</a>
+                  </div>
+                  <div class="project-content">
+                      <h3 class="project-title">Dicas Telegram</h3>
+                      <p class="project-description">Descubra como usar o Telegram e explorar seus principais recursos.</p>
+                      <div class="project-tags">
+                          <span class="tag">Telegram</span>
+                          <span class="tag">Dicas</span>
+                      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="project-card" style="display: flex; justify-content: center; align-items: center; margin-top: 4rem;">
+          <a href="https://wa.me/554892104426" target="_blank" class="btn">
+              <i class="fas fa-headset" style="margin-right: 10px;"></i>Falar com Suporte
+          </a>
+      </div>
+    </section>
+
+    <section id="vantagens">
+        <div class="section-content">
+            <h2 class="section-title">Vantagens</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fa-solid fa-code-merge skill-icon"></i>
+                    <h3>Frequência de Atualização</h3>
+                    <p>Rotas sempre atualizadas para máxima precisão.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-route skill-icon"></i>
+                    <h3>Roteiro Detalhado & Mapas</h3>
+                    <p>Visualize rotas facilmente no portal de roteiros.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-solid fa-lock skill-icon"></i>
+                    <h3>Segurança</h3>
+                    <p>Sistema seguro e preciso para sua tranquilidade.</p>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+    <footer class="f">
+      <div class="notification">Copiado!</div>
+      
+      <div class="w">
+        <p class="t">Desenvolvido por Ryan <i class="fa-solid fa-mug-hot"></i></p>
+        
+        <div class="c">
+          <button class="copy-btn" data-value="ryanzera.dev@gmail.com">
+            <i class="fas fa-envelope"></i>ryanzera.dev@gmail.com
+          </button>
+          <button class="copy-btn" data-value="+5548984613946">
+            <i class="fas fa-phone-alt"></i>+55 (48) 98461-3946
+          </button>
+        </div>
+        
+        <div class="s">
+          <a href="https://www.instagram.com/euoryan/" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://github.com/euoryan" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/euoryan/" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+     
+        <div class="l">
+          <a href="assets/pages/politicadeprivacidade.html" target="_blank">Política de Privacidade</a>
+          <span>•</span>
+          <a href="assets/pages/termosdeuso.html" target="_blank">Termos de Uso</a>
+        </div>        
+     
+      <hr>
+      
+      <div class="w">
+        <div class="cp">
+          <small>© 2024 Todos os direitos reservados.</small>
+        </div>
+      </div>
+    
+      <style>
+        .f {
+          background: #111827;
+          color: #9CA3AF;
+          font: 14px Inter, sans-serif;
+          padding: 16px;
+          position: relative;
+        }
+        .notification {
+          position: fixed;
+          bottom: 20px;
+          left: 50%;
+          transform: translateX(-50%) translateY(100px);
+          background: #2e9aff;
+          color: white;
+          padding: 8px 16px;
+          border-radius: 4px;
+          opacity: 0;
+          transition: 0.3s;
+        }
+        .notification.show {
+          transform: translateX(-50%) translateY(0);
+          opacity: 1;
+        }
+        .w {
+          max-width: 1200px;
+          margin: auto;
+          text-align: center;
+        }
+        .t {
+          font-size: 14px;
+          margin: 0 0 16px;
+        }
+        .c {
+          display: flex;
+          gap: 24px;
+          justify-content: center;
+          margin-bottom: 12px;
+        }
+        .s {
+          display: flex;
+          gap: 20px;
+          justify-content: center;
+          font-size: 18px;
+          margin-bottom: 12px;
+        }
+        .l {
+          font-size: 13px;
+          display: flex;
+          gap: 8px;
+          justify-content: center;
+          margin-bottom: 12px;
+        }
+        hr {
+          border: 0;
+          height: 1px;
+          background: rgba(156, 163, 175, 0.2);
+          margin: 12px 0;
+        }
+        .cp {
+          color: #6B7280;
+          font-size: 12px;
+        }
+        a, .copy-btn {
+          color: inherit;
+          text-decoration: none;
+          display: inline-flex;
+          align-items: center;
+        }
+        .copy-btn {
+          background: none;
+          border: none;
+          cursor: pointer;
+          font: inherit;
+          padding: 0;
+        }
+        i {
+          margin-right: 8px;
+        }
+        .fa-mug-hot {
+          color: #4791ff;
+          animation: b 1s infinite;
+          margin-left: 4px;
+          margin-right: 0;
+        }
+        a:hover, .copy-btn:hover {
+          color: #fff;
+        }
+        @keyframes b {
+          50% {transform: scale(1.1)}
+        }
+        @media(max-width: 640px) {
+          .c {
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+          }
+        }
+      </style>
+    
+      <script>
+        const notification = document.querySelector('.notification');
+        let timeoutId;
+    
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+          btn.addEventListener('click', async () => {
+            const text = btn.getAttribute('data-value');
+            await navigator.clipboard.writeText(text);
+            
+            // Limpa o timeout anterior se existir
+            if (timeoutId) clearTimeout(timeoutId);
+            
+            // Mostra a notificação
+            notification.classList.add('show');
+            
+            // Remove a notificação após 2 segundos
+            timeoutId = setTimeout(() => {
+              notification.classList.remove('show');
+            }, 2000);
+          });
+        });
+      </script>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
